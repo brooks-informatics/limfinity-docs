@@ -20,5 +20,7 @@ Each subject type is annotated with `user-defined fields` (UDFs) that capture th
 1. Log in and click on Settings and Preferences
 2. Click on Subject Types
 3. Click the plus button to create a new Subject Type New Subject Type
+![New Subject Type](/images/guides/new_subject_type.png)
 4. Name your Subject Type "Patient" and specify the Plural Name - Patients Patient
+![Plural Name](/images/guides/plural_name.png)
 5. Click **OK** to save
