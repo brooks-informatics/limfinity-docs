@@ -17,7 +17,9 @@
 <ol>
 <li>Log in and click on Settings and Preferences</li>
 <li>Click on Subject Types</li>
-<li>Click the plus button to create a new Subject Type New Subject Type</li>
-<li>Name your Subject Type &quot;Patient&quot; and specify the Plural Name - Patients Patient</li>
+<li>Click the plus button to create a new Subject Type New Subject Type
+<img src="/images/guides/new_subject_type.png" alt="New Subject Type" /></li>
+<li>Name your Subject Type &quot;Patient&quot; and specify the Plural Name - Patients Patient
+<img src="/images/guides/plural_name.png" alt="Plural Name" /></li>
 <li>Click <strong>OK</strong> to save</li>
 </ol>
