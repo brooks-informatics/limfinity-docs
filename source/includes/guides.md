@@ -21,6 +21,22 @@ Each subject type is annotated with `user-defined fields` (UDFs) that capture th
 2. Click on Subject Types
 3. Click the plus button to create a new Subject Type New Subject Type
 ![New Subject Type](/images/guides/new_subject_type.png)
-4. Name your Subject Type "Patient" and specify the Plural Name - Patients Patient
+4. Name your Subject Type "Patient" and specify the `Plural Name` - Patients
 ![Plural Name](/images/guides/plural_name.png)
 5. Click **OK** to save
+
+## Step 2: Adding User-Defined-Fields to your Subject Type
+
+Now we have a new "Patient" subject type, but it has no fields. Let's add a couple:
+
+1. Click on the "Patient" subject type
+2. Click on the `Add User Defined Field` button and choose `Date` as the field type
+3. Enter "DOB" for the User Field Name and check `Advanced Search`
+![New UDF](/images/guides/new_udf.png)
+4. Let's add a couple other fields: Phone Number (Text Field), Consent Signed (Checkbox), Gender (Choice - Male, Female, Both), Comments (Text Area)
+5. Click **OK** to Save 
+
+<aside class="notice">
+Note that it is necessary to check *Advanced Search* in order to make the field available in queries
+</aside>
+
