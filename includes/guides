@@ -1,0 +1,23 @@
+<h1 id='guides'>Guides</h1><h1 id='modelling-your-data-with-limfinity'>Modelling your data with Limfinity</h1>
+<p>This guide walks you through the process of replicating your data model with Limfinity. In this guide you&#39;ll learn how to:</p>
+
+<ul>
+<li>Create a new subject type</li>
+<li>Create a subject</li>
+<li>Create new user-defined-fields</li>
+<li>Configuring grid options for a subject</li>
+</ul>
+
+<p>In the sections below, we&#39;ll create a &quot;Patient&quot; subject that will be linked to a &quot;Sample.</p>
+<h2 id='step-1-create-a-new-subject-type'>Step 1: Create a new Subject Type</h2>
+<p>A <code>Subject Type</code> defines the type of data you can store. Think of it as a form, or a table.</p>
+
+<p>Each subject type is annotated with <code>user-defined fields</code> (UDFs) that capture the metadata for that object. Each instance of a subject type is called a subject.</p>
+
+<ol>
+<li>Log in and click on Settings and Preferences</li>
+<li>Click on Subject Types</li>
+<li>Click the plus button to create a new Subject Type New Subject Type</li>
+<li>Name your Subject Type &quot;Patient&quot; and specify the Plural Name - Patients Patient</li>
+<li>Click <strong>OK</strong> to save</li>
+</ol>

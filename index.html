@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Limfinity API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;ruby&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,10 +211,7 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
               <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,166 +219,274 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#getting-started" class="toc-h2 toc-link" data-title="getting-started">Getting Started</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#what-is-a-user-defined-field-udf" class="toc-h2 toc-link" data-title="what-is-a-user-defined-field-udf">What is a User-Defined Field (UDF)?</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#values" class="toc-h2 toc-link" data-title="values">Values</a>
+                  </li>
+                  <li>
+                    <a href="#what-is-a-subject" class="toc-h2 toc-link" data-title="what-is-a-subject">What is a Subject?</a>
+                  </li>
+                  <li>
+                    <a href="#using-subjects-in-scripting" class="toc-h2 toc-link" data-title="using-subjects-in-scripting">Using subjects in scripting</a>
+                  </li>
+                  <li>
+                    <a href="#accessing-entered-values-in-a-form" class="toc-h2 toc-link" data-title="accessing-entered-values-in-a-form">Accessing Entered Values in a Form</a>
+                  </li>
+                  <li>
+                    <a href="#exception-handling" class="toc-h2 toc-link" data-title="exception-handling">Exception Handling</a>
+                  </li>
+                  <li>
+                    <a href="#debugging" class="toc-h2 toc-link" data-title="debugging">Debugging</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#manipulating-subjects" class="toc-h1 toc-link" data-title="manipulating-subjects">Manipulating Subjects</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-value" class="toc-h2 toc-link" data-title="get-value">Get Value</a>
+                  </li>
+                  <li>
+                    <a href="#set-value" class="toc-h2 toc-link" data-title="set-value">Set Value</a>
+                  </li>
+                  <li>
+                    <a href="#removing-values" class="toc-h2 toc-link" data-title="removing-values">Removing Values</a>
+                  </li>
+                  <li>
+                    <a href="#naming-subjects" class="toc-h2 toc-link" data-title="naming-subjects">Naming Subjects</a>
+                  </li>
+                  <li>
+                    <a href="#creating-subjects" class="toc-h2 toc-link" data-title="creating-subjects">Creating Subjects</a>
+                  </li>
+                  <li>
+                    <a href="#deleting-subjects" class="toc-h2 toc-link" data-title="deleting-subjects">Deleting Subjects</a>
+                  </li>
+                  <li>
+                    <a href="#copying-properties-from-another-subject" class="toc-h2 toc-link" data-title="copying-properties-from-another-subject">Copying Properties from Another Subject</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#guides" class="toc-h1 toc-link" data-title="guides">Guides</a>
+          </li>
+          <li>
+            <a href="#modelling-your-data-with-limfinity" class="toc-h1 toc-link" data-title="modelling-your-data-with-limfinity">Modelling your data with Limfinity</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#step-1-create-a-new-subject-type" class="toc-h2 toc-link" data-title="step-1-create-a-new-subject-type">Step 1: Create a new Subject Type</a>
+                  </li>
+              </ul>
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Limfinity scripting enables the user to expand out-of-the-box Limfinity framework functionality. Below are a couple examples that can be done
+with scripting.</p>
+<h2 id='getting-started'>Getting Started</h2>
+<p>Any UI element in Limfinity can be configured with a script which will run before or after the UI element is clicked. The Ruby language is used to create scripts in Limfinity. Examples of this include:</p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<ul>
+<li>Creating objects after a button is clicked</li>
+<li>Running a search after a dialog is closed</li>
+<li>Setting default values</li>
+<li>Showing custom error messages</li>
+</ul>
 
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<p>You can view all configured scripts in Limfinity by going to &quot;Settings and Preferences&quot; --&gt; More Settings --&gt; All Scripts</p>
+<h2 id='what-is-a-user-defined-field-udf'>What is a User-Defined Field (UDF)?</h2>
+<p>User-Defined Fields (UDFs) make up the subjects in Limfinity. Each UDF corresponds to a subject property. There are many types of UDFs, each with its own corresponding value types. For example, a “Number” type UDF only supports the entering of numerical values, whereas a “Date” type UDF only supports date format values. UDFs are often set using scripts.</p>
+<h2 id='values'>Values</h2>
+<p>Values in Limfinity are defined as the generic objects which are to be manipulated. Values can be user-defined fields, standard fields, names, and IDs.</p>
+<h2 id='what-is-a-subject'>What is a Subject?</h2>
+<p>A subject is a Limfinity object with defined fields and values. A subject can have any number of fields, including collections of other subjects. Subjects are the core objects in Limfinity which are manipulated and handled to store data.
+Subjects can be of any type which has been defined in the Limfinity system, and there is no limit to the number of subjects which can be created. Subjects store data in standard and user-defined fields, and progress through respective workflows.</p>
+<h2 id='using-subjects-in-scripting'>Using subjects in scripting</h2>
+<p>“Subj” is a Limfinity term which refers to the currently opened subject. For example, when working with
+ a sample subject record, “subj” in a script in that record’s window will refer to that subject. Any <code>get_value()</code> calls will refer to the data within that subject.</p>
+<h2 id='accessing-entered-values-in-a-form'>Accessing Entered Values in a Form</h2><pre class="highlight ruby tab-ruby"><code><span class="c1"># Populate the subject with values from a form, unless the value in the form is blank</span>
+<span class="n">params</span><span class="p">.</span><span class="nf">each_pair</span><span class="p">{</span><span class="o">|</span><span class="n">udf</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span>
+  <span class="k">if</span> <span class="n">value</span><span class="p">.</span><span class="nf">present?</span>
+    <span class="n">subj</span><span class="p">.</span><span class="nf">set_value</span><span class="p">(</span><span class="n">udf</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="n">subj</span><span class="p">.</span><span class="nf">remove_prop</span><span class="p">(</span><span class="n">udf</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="p">}</span>
 </code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<p>It is sometimes necessary to get the value of a field object in a script for variable assignment or storage. When manipulating a subject in a script, the <code>get_value()</code> method is used. However if a script is being run without a subject object, for example when entering information into a form via a Quick Link, then the <code>params[]</code> call is used. The <code>params[]</code> call obtains the value which is entered into the form, respective to each field.</p>
+<h3 id='parameters'>Parameters</h3><pre class="highlight ruby tab-ruby"><code><span class="c1"># Using the params[:required] script will ensure that each UDF with a "true" parameter must have a value</span>
+<span class="c1"># before the form can be submitted.</span>
+<span class="n">params</span><span class="p">[</span><span class="ss">:required</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'Chem Analyses'</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+    <span class="s1">'Chemistry Package'</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="p">}</span>
+</code></pre>
+<p>Parameters are accessed in a similar way as fields with already set values. The standard syntax for obtaining a parameter’s information is params[‘FIELD NAME’]. This call is very useful when creating a subject. The params[] call may be used within a set_value() method call, where the parameter may be the value to set.</p>
+<h2 id='exception-handling'>Exception Handling</h2><pre class="highlight ruby tab-ruby"><code><span class="c1"># The raise method is used for exception handling, and is also good for debugging</span>
+<span class="c1"># Here we raise the value of the "Sample Type" UDF of the opened subject to see its value in a new window</span>
+<span class="k">raise</span> <span class="n">subj</span><span class="p">.</span><span class="nf">get_value</span><span class="p">(</span><span class="s1">'Sample Type'</span><span class="p">)</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="c1"># Here we raise an error message if the value of the "PH Level" UDF is higher than 7</span>
+<span class="k">if</span> <span class="n">subj</span><span class="p">.</span><span class="nf">get_value</span><span class="p">(</span><span class="s1">'PH Level'</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">7</span>
+    <span class="k">raise</span> <span class="s2">"PH level is too high"</span>
+<span class="k">end</span>
+</code></pre>
+<p>Limfinity supports the Ruby “Raise” method, which is used for handling exceptions. When an exception (error) needs to be handled, the raise method is an excellent tool. When an exception is handled using the raise method, the script in Limfinity will cease running, and as a result no actions will have been performed.</p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>The raise method can be used for exception handling, and for logic and value checking. In this example, an error message is thrown if the value of the subject’s “PH Level” is higher than 7.</p>
+<h2 id='debugging'>Debugging</h2>
+<p>The <code>inspect</code> method can be called on a subject to provide output of a specified value inside a <code>raise</code> statement. This is equivalent to calling <code>to_json</code> on a Limfinity object.
+The <code>raise</code> method can be used to break out of a script and display a message.</p>
+<h3 id='to-troubleshoot-an-error-thrown-by-limfinity'>To troubleshoot an error thrown by Limfinity:</h3>
+<ul>
+<li>Copy the error message out of the error dialog</li>
+<li>Go to <code>Settings and Preferences</code>, choose <code>System Preferences</code> and click on <code>VM Console Log</code>
+<img src="images/guides/vm_console_log_loc.png" alt="VM Console Log Location" /></li>
+<li>Scroll to the bottom of the console log (the latest errors will show up on the bottom)
+<img src="images/guides/vm_console.png" alt="VM Console Log" /></li>
+<li>If the error message is not at the bottom of the console log, click <code>Ctrl+F</code> to paste the copied error message into the search box</li>
+<li>Once you have located the error message in the console log, take note of the line number and the script name where the error was originated. The stack trace accompanying the error will be shown below the error in the console log.</li>
+<li>Apply the fix to the script referenced in the console log and perform the action again.</li>
+</ul>
+<h1 id='manipulating-subjects'>Manipulating Subjects</h1><h2 id='get-value'>Get Value</h2><pre class="highlight ruby tab-ruby"><code><span class="c1"># In this example, a variable ‘age’ is set to the value of the subject’s “Age” user-defined field.</span>
+ <span class="n">age</span> <span class="o">=</span> <span class="n">subj</span><span class="p">.</span><span class="nf">get_value</span><span class="p">(</span><span class="s1">'Age'</span><span class="p">)</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="c1"># This subject is a "Testing Run". A testing run can have a sample, which can have its own information</span>
+<span class="c1">#  This call will obtain the value of the dilution of the sample within the testing run</span>
+<span class="n">dilution</span> <span class="o">=</span> <span class="n">subj</span><span class="p">.</span><span class="nf">get_value</span><span class="p">(</span><span class="s1">'Sample'</span><span class="p">).</span><span class="nf">get_value</span><span class="p">(</span><span class="s1">'Dilution'</span><span class="p">)</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="c1"># The object 'Samples' is a collection of sample subjects, therefore it is stored in an array.</span>
+<span class="c1"># A get_value() method call can be used to obtain teh collection of sample subjects.</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">subj</span><span class="p">.</span><span class="nf">get_value</span><span class="p">(</span><span class="s1">'Samples'</span><span class="p">)</span>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<span class="c1">#For example, the destroy method will destroy the first sample (index) in the samples array,</span>
+<span class="c1"># As designated by the [0]. Note that array indeces start at 0.</span>
+<span class="n">samples</span><span class="p">.</span><span class="nf">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">destroy</span>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<span class="c1">#Loops can also be used to perform actions on all elements in the array.</span>
+<span class="n">samples</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">example</span><span class="o">|</span>
+  <span class="n">example</span><span class="p">.</span><span class="nf">destroy</span>
+<span class="k">end</span>
+</code></pre>
+<p>Returns a value of a property.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>property</td>
+<td>The value of the property to retrieve</td>
+</tr>
+</tbody></table>
+
+<p>It is possible to “chain” get_value() method calls for downstream objects. In this example, the value of a testing run’s sample’s dilution is obtained. There is no limit to the number of get_value() chains that may be called.</p>
+
+<p>Arrays are collections of data, therefore the get_value() method call can be used to obtain the value of the collection.</p>
+
+<p>Note that in order to perform any action on an element in the array, a loop must be used for a single index that must be defined</p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Note that it is necessary to add a ruby suffix to the <code>get_value()</code> method call when a specific value or type conversion is necessary. For example, in the example above if it were necessary to get the absolute last value in the array, but the size of the array was unknown, it would be necessary to use <code>subj.get_value(‘Samples’).last</code>.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='set-value'>Set Value</h2><pre class="highlight ruby tab-ruby"><code><span class="c1"># Example: Setting a single value</span>
+<span class="c1"># Set_value takes two parameters. The first parameter is the value (Request Method), and the second is the intended value (Metagenomics).</span>
+<span class="c1"># Here we set the request method for the subject to Metagenomics.</span>
+  <span class="n">subj</span><span class="p">.</span><span class="nf">set_value</span><span class="p">(</span><span class="s1">'Request Method'</span><span class="p">,</span> <span class="s1">'Metagenomics'</span><span class="p">)</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="c1"># Chaining get_value() to set_value()</span>
+<span class="c1"># In this example, a subject has a reference subject called “First Analysis”. The “First Analysis” subject has a subject called “First Sample”.</span>
+<span class="c1"># With this chained call, the “First Sample” subject is having its “Sample Name” UDF assigned the value of “Example”, even though that subject is not currently opened on the screen.</span>
+<span class="c1"># set_value() can be chained together after a get_value()</span>
+<span class="c1"># Here we get the field "First Sample" from the field of a referenced subject "First Analysis" of the opened subject,</span>
+<span class="c1"># and set the value of that first sample's UDF "Sample Name" to "Example".</span>
+<span class="n">subj</span><span class="p">.</span><span class="nf">get_value</span><span class="p">(</span><span class="s1">'First Analysis'</span><span class="p">).</span><span class="nf">get_value</span><span class="p">(</span><span class="s1">'First Sample'</span><span class="p">).</span><span class="nf">set_value</span><span class="p">(</span><span class="s2">"Sample Name"</span><span class="p">,</span> <span class="s2">"Example"</span><span class="p">)</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<span class="c1"># Looping set_value()</span>
+<span class="c1"># Loops are very useful when it is necessary to set the value of a field for several subjects</span>
+<span class="c1"># Here we get the array of analyses of this subject, loop through each one, and set the UDF value "Checked" to "Yes"</span>
+<span class="n">subj</span><span class="p">.</span><span class="nf">get_value</span><span class="p">(</span><span class="s1">'Analyses'</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">analysis</span><span class="o">|</span>
+  <span class="n">analysis</span><span class="p">.</span><span class="nf">set_value</span><span class="p">(</span><span class="s1">'Checked?'</span><span class="p">,</span> <span class="s1">'Yes'</span><span class="p">)</span>
+<span class="k">end</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p>The <code>set_value()</code> method is used for setting the value of a subject’s or several subjects’ user-defined fields. The method accepts two parameters, the first of which is the field to be set, and the second of which is the intended value.</p>
+<h3 id='parameters-3'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>property</td>
+<td>The intended property to be set</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>value</td>
+<td>The intended value for the property</td>
 </tr>
 </tbody></table>
+<h2 id='removing-values'>Removing Values</h2><pre class="highlight ruby tab-ruby"><code><span class="c1"># This example has the user select a Test Panel that will have all associated Lab Tests removed</span>
+<span class="n">panel</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">'Select Panel to Clear Tests From'</span><span class="p">]</span>
+<span class="n">panel</span><span class="p">.</span><span class="nf">remove_prop</span><span class="p">(</span><span class="s1">'Lab Tests'</span><span class="p">)</span>
+</code></pre>
+<p>The <code>remove_prop()</code> method is used to clear the contents of user defined fields within a subject. The <code>remove_prop()</code> method is executed on the subject that calls the method. Note that the UDF is not permanently removed from the subject; <code>remove_prop()</code> method clears the value currently stored in the UDF for calling subject.</p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>property</td>
+<td>The value of the property to clear</td>
+</tr>
+</tbody></table>
+<h2 id='naming-subjects'>Naming Subjects</h2><pre class="highlight ruby tab-ruby"><code><span class="c1"># Example: Overriding the Name of a Subject</span>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<span class="c1"># To set the name of a subject, an assignment operation can be used. Note that subject names must always be unique.</span>
+<span class="c1"># Here we overwrite the name of the subject by appending the current date and time to it.</span>
+<span class="c1"># Using the current date and time is a good way to ensure that the name of the subject remains unique.</span>
+<span class="n">subj</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="p">(</span><span class="n">subj</span><span class="p">.</span><span class="nf">name</span> <span class="o">+</span> <span class="no">Time</span><span class="p">.</span><span class="nf">now</span><span class="p">.</span><span class="nf">to_s</span><span class="p">)</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="c1">#  Example: get_next_name_number</span>
+
+<span class="c1"># Using the get_next_name_number is another way to ensure that a subject’s name remains unique. This method can be used when creating a subject or reassigning its name.</span>
+<span class="c1"># Here we use the get_next_name_number method to ensure the subject's name is unique</span>
+<span class="s2">"Sample "</span> <span class="o">+</span> <span class="s1">'-'</span> <span class="o">+</span> <span class="p">(</span><span class="s2">"%05d"</span><span class="o">%</span> <span class="n">subject_type</span><span class="p">.</span><span class="nf">get_next_name_number</span><span class="p">)</span>
+</code></pre>
+<p>Subjects can be named in a variety of ways in Limfinity. For example, names can be generated via the subject type’s extension, or they can be set manually during a subject edit, or they may be modified using a simple assignment operation.</p>
+
+<aside class="notice">
+It is important to derive a consistent naming convention for subjects when configuring Limfinity  software. Subjects with consistent names will be easier to work with and search for in Limfinity, and will
+be easier to modify via scripts as well. Consider positive naming conventions and schemas prior to configuring Limfinity.
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='creating-subjects'>Creating Subjects</h2><pre class="highlight ruby tab-ruby"><code><span class="c1"># Here we create a subject, and within a loop set a few of its UDF values</span>
+<span class="c1"># Note that the UDF values are being set to the values which have been entered into the form by using the params[] objects</span>
+<span class="n">subject</span> <span class="o">=</span> <span class="n">create_subject</span><span class="p">(</span><span class="s1">'Job'</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">jb</span><span class="o">|</span>
+  <span class="n">jb</span><span class="p">.</span><span class="nf">set_value</span><span class="p">(</span><span class="s1">'Client'</span><span class="p">,</span> <span class="n">params</span><span class="p">[</span><span class="s1">'Client'</span><span class="p">])</span>
+  <span class="n">jb</span><span class="p">.</span><span class="nf">set_value</span><span class="p">(</span><span class="s1">'# of Samples'</span><span class="p">,</span> <span class="n">params</span><span class="p">[</span><span class="s1">'# of Samples'</span><span class="p">])</span>
+<span class="k">end</span>
+</code></pre><pre class="highlight ruby tab-ruby"><code><span class="c1"># Here we call the create_subject method and create a subject of type "QC Sample"</span>
+<span class="c1"># Using the open_subject() method call, the created subject will be opened.</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">subject</span> <span class="o">=</span> <span class="n">create_subject</span><span class="p">(</span><span class="s1">'QC Sample'</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
+<p>To create subjects via scripts in Limfinity, the <code>create_subject()</code> method is called. The <code>create_subject()</code> method is often called using a loop, so as to create multiple subjects, or to assign values to the subject which is being created.</p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<p>It is often the intent to create a subject and immediately begin working on it, however the <code>create_subject()</code> method call only creates the subject. In order to open the subject to immediately view it and work with it after it has been created, the <code>open_subject()</code> method call is used.</p>
+<h3 id='parameters-5'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -389,113 +494,63 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>subject_type</td>
+<td>The subject type of which the subject is to be created.</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='deleting-subjects'>Deleting Subjects</h2><pre class="highlight ruby tab-ruby"><code><span class="c1"># Here we delete each sample associated with the subject</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">subj</span><span class="p">.</span><span class="nf">get_value</span><span class="p">(</span><span class="n">samples</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">sample</span><span class="o">|</span>
+  <span class="n">sample</span><span class="p">.</span><span class="nf">destroy</span>
+<span class="k">end</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<p>To delete subjects in Limfinity, the destroy() method is used. Calling the destroy() method will delete the subject from the database. The associated information and user-defined field data will be deleted as well.</p>
 
-<p>The Kittn API uses the following error codes:</p>
+<aside class="notice">
+Only use the destroy() method when it is confirmed that the subject is to be completed removed from the database. The destroy() method will remove the object and associated object information from the database.
+</aside>
+<h2 id='copying-properties-from-another-subject'>Copying Properties from Another Subject</h2><pre class="highlight ruby tab-ruby"><code><span class="c1"># Here we create a new family, and copy the properties of it from an existing family (subject)</span>
+<span class="n">familyname</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">'Family'</span><span class="p">]</span>
 
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
+<span class="n">patient</span> <span class="o">=</span> <span class="n">create_subject</span><span class="p">(</span><span class="s1">'Patient'</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span>
+    <span class="nb">p</span><span class="p">.</span><span class="nf">set_value</span><span class="p">(</span><span class="s1">'Family'</span><span class="p">,</span> <span class="n">familyname</span><span class="p">)</span>
+    <span class="nb">p</span><span class="p">.</span><span class="nf">set_value</span><span class="p">(</span><span class="s1">'UDP Inquiry'</span><span class="p">,</span> <span class="n">subj</span><span class="p">)</span>
+    <span class="nb">p</span><span class="p">.</span><span class="nf">copy_properties_from</span><span class="p">(</span><span class="n">subj</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+<p>To copy properties from one subject to another, the copy_properties_from() method is used. This method is useful for duplicating subjects, and creating new subjects with existing data.</p>
+
+<p>aside class=&quot;notice&quot;&gt;
+Copying properties works simply by taking a subject (user-defined field) and duplicating that data into another subject.
+</aside></p>
+<h1 id='guides'>Guides</h1><h1 id='modelling-your-data-with-limfinity'>Modelling your data with Limfinity</h1>
+<p>This guide walks you through the process of replicating your data model with Limfinity. In this guide you&#39;ll learn how to:</p>
+
+<ul>
+<li>Create a new subject type</li>
+<li>Create a subject</li>
+<li>Create new user-defined-fields</li>
+<li>Configuring grid options for a subject</li>
+</ul>
+
+<p>In the sections below, we&#39;ll create a &quot;Patient&quot; subject that will be linked to a &quot;Sample.</p>
+<h2 id='step-1-create-a-new-subject-type'>Step 1: Create a new Subject Type</h2>
+<p>A <code>Subject Type</code> defines the type of data you can store. Think of it as a form, or a table.</p>
+
+<p>Each subject type is annotated with <code>user-defined fields</code> (UDFs) that capture the metadata for that object. Each instance of a subject type is called a subject.</p>
+
+<ol>
+<li>Log in and click on Settings and Preferences</li>
+<li>Click on Subject Types</li>
+<li>Click the plus button to create a new Subject Type New Subject Type</li>
+<li>Name your Subject Type &quot;Patient&quot; and specify the Plural Name - Patients Patient</li>
+<li>Click <strong>OK</strong> to save</li>
+</ol>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
                 <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
