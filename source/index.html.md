@@ -8,14 +8,7 @@ toc_footers:
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
-  - workflows
-  - messages
-  - udfs
-  - customforms
-  - emails
-  - errors
   - guides
-  - api
 
 search: true
 ---

@@ -1,22 +1,24 @@
-# Errors
+# Guides
 
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
+# Modelling your data with Limfinity
 
-The Kittn API uses the following error codes:
+This guide walks you through the process of replicating your data model with Limfinity. In this guide you'll learn how to:
+
+* Create a new subject type
+* Create a subject
+* Create new user-defined-fields
+* Configuring grid options for a subject
+
+In the sections below, we'll create a "Patient" subject that will be linked to a "Sample.
 
 
-Error Code | Meaning
----------- | -------
-400 | Bad Request -- Your request is invalid.
-401 | Unauthorized -- Your API key is wrong.
-403 | Forbidden -- The kitten requested is hidden for administrators only.
-404 | Not Found -- The specified kitten could not be found.
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method.
-406 | Not Acceptable -- You requested a format that isn't json.
-410 | Gone -- The kitten requested has been removed from our servers.
-418 | I'm a teapot.
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.
+## Step 1: Create a new Subject Type
+A `Subject Type` defines the type of data you can store. Think of it as a form, or a table.
+
+Each subject type is annotated with `user-defined fields` (UDFs) that capture the metadata for that object. Each instance of a subject type is called a subject.
+
+1. Log in and click on Settings and Preferences
+2. Click on Subject Types
+3. Click the plus button to create a new Subject Type New Subject Type
+4. Name your Subject Type "Patient" and specify the Plural Name - Patients Patient
+5. Click **OK** to save
