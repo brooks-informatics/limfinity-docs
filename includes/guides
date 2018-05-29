@@ -36,5 +36,99 @@
 </ol>
 
 <aside class="notice">
-Note that it is necessary to check *Advanced Search* in order to make the field available in queries
+Note that it is necessary to check <b>Advanced Search</b> in order to make the field available in queries
 </aside>
+
+<p>Let&#39;s also create another subject type and name it &quot;Sample&quot; with the field Amount (Numeric)</p>
+<h2 id='step-3-creating-a-subject'>Step 3: Creating a subject</h2>
+<p>Our &#39;Patient&#39; subject type has fields defined, but we do not yet have any actual patients. </p>
+
+<p>Let&#39;s make a patient:</p>
+
+<ol>
+<li>Click on <code>Explorer</code></li>
+<li>Click on Patients</li>
+<li>Click the plus button to add a new subject</li>
+<li>Enter values for DOB, Gender, Consent Signed, Phone number, Comments and click OK to save the new subject
+<img src="/images/guides/new_patient.png" alt="New UDF" /></li>
+</ol>
+<h2 id='configuring-the-subject-type-grid'>Configuring the subject type grid</h2>
+<p>Our newly added fields are not  yet showing up on patient result grids. Let&#39;s configure the grid and add our new fields:
+<aside class="notice">
+Configuring grid View Options allows you to specify which columns should be shown in a grid for that subject as well as the order/width of the columns.
+</aside></p>
+
+<ol>
+<li>Click on <code>Settings and Preferences</code></li>
+<li>Click on <code>Subject Types</code></li>
+<li>Select Patient and click <code>View Options</code></li>
+<li>Add fields DOB, Gender, Phone Number, Consent Signed and Comments</li>
+<li>Remove the UID field</li>
+<li>Move the fields DOB, Gender, Phone Number and Consent Singed to the top and click <strong>OK</strong>
+<img src="/images/guides/grid_config.png" alt="New UDF" /></li>
+</ol>
+<h1 id='creating-workflows'>Creating workflows</h1>
+<p>This guide walks you through the process of creating a workflow. In this guide you will learn how to:</p>
+
+<ul>
+<li>Create a new new workflow</li>
+<li>Create workflow states</li>
+<li>Add tools to a workflow</li>
+<li>Take a subject through a workflow</li>
+</ul>
+
+<p>In the sections below, we&#39;ll create an &quot;Issue&quot; workflow. Let&#39;s start by creating an &quot;Issue&quot; subject type with fields: Description (Text Area), Status (Choice), Assignee (User), Resolved Date (Date)</p>
+<h2 id='step-1-create-a-new-workflow'>Step 1: Create a new Workflow</h2>
+<p>Each workflow can only be attached to one single subject type, but subject types can belong to multiple workflows. A workflow describes how subjects go through processes and what actions are available for each state</p>
+
+<ol>
+<li>Click on <code>Settings and Preferences</code></li>
+<li>Click on the plus button and select the desired subject type (&quot;Issue)
+<aside class="notice">
+If you just created a new subject type, you will need to refresh the page for it to show up in the dropdown
+</aside></li>
+<li>Enter a name for the workflow. The convention is to name it the same as the subject type, so let&#39;s put in &quot;Issue&quot; as the worklfow name</li>
+<li>Click on the workflow to open it in the workflow editor window
+<img src="/images/guides/new_workflow.png" alt="New UDF" /></li>
+</ol>
+<h2 id='step-2-add-states'>Step 2: Add states</h2>
+<p>We have a brand new &quot;Issue&quot; workflow, but it has no states. Each record in the workflow will go through a sequence of states that model the workflow.
+For our &quot;Issue&quot; workflow, we know that it can either be &quot;Open&quot; or &quot;Resolved&quot;. 
+1. Click on the plus button to add a new state
+<img src="/images/guides/new_workflow_state.png" alt="New UDF" />
+2. Let&#39;s call the new state &quot;Open&quot;. This new state will appear on the canvas. By default, this state will be the entry state for all new subjects in the &quot;Issue&quot; workflow, but you can always change the first state by specifying a new &quot;Entry State&quot; in workflow editor
+3. Create another state called &quot;Resolved&quot;
+<img src="/images/guides/resolved_state.png" alt="New UDF" /></p>
+<h2 id='step-3-adding-a-workflow-transition'>Step 3: Adding a workflow transition</h2>
+<p>Now that we have both &quot;Open&quot; and &quot;Resolved&quot; states, let&#39;s link it together. To do this, you will need to create a tool (it can be any type of tool)
+1. Click on the plus button in the <code>Tools</code> tab
+2. Give your tool a name, and a title. <code>Name</code> is the internal identifier, while <code>Title</code> is the user-facing value
+3. Specify the <code>Input Subject Type</code> = Issue
+4. Specify the <code>Workflow Transition</code> = Resolved
+5. Drag the tool into the &quot;Open&quot; state
+<img src="/images/guides/transition.png" alt="New UDF" />
+5. You should now see an arrow stretch the &quot;Open&quot; state to the &quot;Resolved&quot; state
+<img src="/images/guides/linked_state.png" alt="New UDF" /></p>
+
+<p>Let&#39;s add another tool to create a new Issue
+1. Create a <code>Create New Subject</code> tool and name it &quot;New Issue&quot;
+2. Fill out the <code>Name</code>, <code>Title</code>, <code>Output Subject Type</code>, and <code>Workflow</code>
+3. Click <code>OK</code></p>
+<h2 id='step-4-adding-tool-groups'>Step 4: Adding tool groups</h2>
+<p>You can reuse individual tools or multiple tools in many workflows by placing them into tool groups. Tool groups can be reused in multiple places such as quicklinks or workflows
+1. Click on the plus button in the <code>Tool Groups</code> tab
+2. Fill out the <code>Name</code> = Issues and the <code>Title</code> = Issues fields
+<img src="/images/guides/new_tool_group.png" alt="New UDF" />
+3. You can specify whether to display the tool group as a quick link, or as a set of buttons on the workflow state. Let&#39;s place it in the Quick Links bar
+4. Add the &quot;Resolve&quot; and the &quot;New Issue&quot; tools to this tool group
+4. Refresh to see a folder with the workflow tools</p>
+<h2 id='step-5-taking-a-subject-record-through-a-workflow'>Step 5: Taking a subject record through a workflow</h2>
+<p>Let&#39;s take an Issue from being open to resolution:</p>
+
+<ol>
+<li>Click on <code>Explorer</code>. and select <code>Issues</code></li>
+<li>Click <code>New Issue</code></li>
+<li>A dialog for the new issue record should open
+<img src="/images/guides/new_issue.png" alt="New UDF" /></li>
+<li>Upon saving, you should see a &quot;Resolve&quot; button on the record</li>
+</ol>
