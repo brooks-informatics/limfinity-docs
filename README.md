@@ -116,3 +116,12 @@ Special Thanks
 - [middleman-syntax](https://github.com/middleman/middleman-syntax)
 - [middleman-gh-pages](https://github.com/edgecase/middleman-gh-pages)
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+
+## to run
+bundle exec middleman server
+
+## To commit
+git add.
+git commit -m "message"
+git push
+./deploy.sh
