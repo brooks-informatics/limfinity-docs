@@ -39,7 +39,15 @@
 Note that it is necessary to check <b>Advanced Search</b> in order to make the field available in queries
 </aside>
 
-<p>Let&#39;s also create another subject type and name it &quot;Sample&quot; with the field Amount (Numeric)</p>
+<p>Let&#39;s also create another subject type and name it &quot;Sample&quot; with the field Amount (Numeric). What we want to do now is to link the sample to the patient it has been collected from.</p>
+
+<ol>
+<li>Open the &quot;Sample&quot; subject type</li>
+<li>Click on <code>Add User Defined Field</code> button and choose <code>Limfinity</code> -&gt; <code>Subject</code> as the field type</li>
+<li>Enter &quot;Patient&quot; as the User Field Name and select <code>Patient</code> as the `Subject Type
+<img src="/images/guides/subject_udf_patient.png" alt="New UDF" /></li>
+<li>Click <strong>OK</strong> to Save</li>
+</ol>
 <h2 id='step-3-creating-a-subject'>Step 3: Creating a subject</h2>
 <p>Our &#39;Patient&#39; subject type has fields defined, but we do not yet have any actual patients. </p>
 
@@ -77,7 +85,14 @@ Configuring grid View Options allows you to specify which columns should be show
 <li>Take a subject through a workflow</li>
 </ul>
 
-<p>In the sections below, we&#39;ll create an &quot;Issue&quot; workflow. Let&#39;s start by creating an &quot;Issue&quot; subject type with fields: Description (Text Area), Status (Choice), Assignee (User), Resolved Date (Date)</p>
+<p>In the sections below, we&#39;ll create an &quot;Issue&quot; workflow. Let&#39;s start by creating an &quot;Issue&quot; subject type with fields:</p>
+
+<ol>
+<li>Description (Text Area)</li>
+<li>Status (Choice)</li>
+<li>Assignee (User)</li>
+<li>Resolved Date (Date)</li>
+</ol>
 <h2 id='step-1-create-a-new-workflow'>Step 1: Create a new Workflow</h2>
 <p>Each workflow can only be attached to one single subject type, but subject types can belong to multiple workflows. A workflow describes how subjects go through processes and what actions are available for each state</p>
 
@@ -108,27 +123,35 @@ For our &quot;Issue&quot; workflow, we know that it can either be &quot;Open&quo
 5. Drag the tool into the &quot;Open&quot; state
 <img src="/images/guides/transition.png" alt="New UDF" />
 5. You should now see an arrow stretch the &quot;Open&quot; state to the &quot;Resolved&quot; state
-<img src="/images/guides/linked_state.png" alt="New UDF" /></p>
+<img src="/images/guides/linked_states.png" alt="New UDF" /></p>
 
-<p>Let&#39;s add another tool to create a new Issue
-1. Create a <code>Create New Subject</code> tool and name it &quot;New Issue&quot;
-2. Fill out the <code>Name</code>, <code>Title</code>, <code>Output Subject Type</code>, and <code>Workflow</code>
-3. Click <code>OK</code></p>
+<p>Let&#39;s add another tool to create a new Issue:</p>
+
+<ol>
+<li>Create a <code>Create New Subject</code> tool and name it &quot;New Issue&quot;</li>
+<li>Fill out the <code>Name</code>, <code>Title</code>, <code>Output Subject Type</code>, and <code>Workflow</code></li>
+<li>Click <code>OK</code> to create a new Issue record</li>
+</ol>
 <h2 id='step-4-adding-tool-groups'>Step 4: Adding tool groups</h2>
-<p>You can reuse individual tools or multiple tools in many workflows by placing them into tool groups. Tool groups can be reused in multiple places such as quicklinks or workflows
-1. Click on the plus button in the <code>Tool Groups</code> tab
-2. Fill out the <code>Name</code> = Issues and the <code>Title</code> = Issues fields
-<img src="/images/guides/new_tool_group.png" alt="New UDF" />
-3. You can specify whether to display the tool group as a quick link, or as a set of buttons on the workflow state. Let&#39;s place it in the Quick Links bar
-4. Add the &quot;Resolve&quot; and the &quot;New Issue&quot; tools to this tool group
-4. Refresh to see a folder with the workflow tools</p>
+<p>Starting with Limfinity 7.1 you can now reuse individual tools or multiple tools in many workflows by placing them into tool groups. Tool groups can be used in many places such as <code>Quick Links</code> (buttons that appear in the left nav bar) or workflows.</p>
+
+<p>To create a toolgroup:</p>
+
+<ol>
+<li>Click on the plus button in the <code>Tool Groups</code> tab</li>
+<li>Fill out the <code>Name</code> = Issues and the <code>Title</code> = Issues fields
+<img src="/images/guides/new_tool_group.png" alt="New UDF" /></li>
+<li>You can specify whether to display the tool group as a quick link, or as a set of buttons on the workflow state. Let&#39;s place this toolgroup in the Quick Links bar.</li>
+<li>Add the &quot;Resolve&quot; and the &quot;New Issue&quot; tools to this tool group</li>
+<li>Refresh to see a folder with the workflow tools</li>
+</ol>
 <h2 id='step-5-taking-a-subject-record-through-a-workflow'>Step 5: Taking a subject record through a workflow</h2>
 <p>Let&#39;s take an Issue from being open to resolution:</p>
 
 <ol>
 <li>Click on <code>Explorer</code>. and select <code>Issues</code></li>
 <li>Click <code>New Issue</code></li>
-<li>A dialog for the new issue record should open
-<img src="/images/guides/new_issue.png" alt="New UDF" /></li>
-<li>Upon saving, you should see a &quot;Resolve&quot; button on the record</li>
+<li>A &quot;New Issue&quot; dialog will open</li>
+<li>Fill out the data to create a new Issue</li>
+<li>Upon saving, the page for the new record will open and you should see a &quot;Resolve&quot; button on the right of the page</li>
 </ol>
