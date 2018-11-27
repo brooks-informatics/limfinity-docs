@@ -900,3 +900,11 @@ This example is not linked to a corresponding method. The purpose of this exampl
 <aside class="notice">
 <b>Note:</b> Auth tokens are only valid for ten minutes after they have either been created or last used. If an expired or invalid token is used, the following error message should be displayed: “Invalid Token”.
 </aside>
+
+
+```ruby
+suffix = subj.get_value('Program Identifier')
+url= 'https://clinicaltrialsapi.cancer.*9'
+```
+## Calling External APIs with Limfinity
+User can use call_external_service in After Script with optional :get, :post(default), and :put to specify the HTTP methods

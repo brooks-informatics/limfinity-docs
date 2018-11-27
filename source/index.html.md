@@ -118,6 +118,9 @@ The `raise` method can be used to break out of a script and display a message.
 ```ruby
 # This subject is a "Testing Run". A testing run can have a sample, which can have its own information
 #  This call will obtain the value of the dilution of the sample within the testing run
+#It is possible to “chain” get_value() method calls for downstream objects. In this example, the value of a
+#testing run’s sample’s dilution is obtained. There is no limit to the number of get_value() chains that may
+#be called.
 dilution = subj.get_value('Sample').get_value('Dilution')
 ```
 
@@ -137,7 +140,14 @@ end
 ```
 
 
-Returns a value of a property.
+Returns a value of a property. The get_value() method is used for obtaining a value of a subject’s or several subjects’ user-defined fields.
+This method gets the value of the defined parameter, and stores it in any variable to which it is assigned.
+
+### Defining Subject - “Subj”
+
+“Subj” is a Limfinity term which refers to the currently opened subject. For example, when working with a
+sample subject record, “subj” in a script in that record’s window will refer to that subject. Any get_value()
+calls will refer to the data within that subject.
 
 ### Parameters
 
@@ -145,7 +155,7 @@ Parameter | Description
 --------- | -----------
 property | The value of the property to retrieve
 
-It is possible to “chain” get_value() method calls for downstream objects. In this example, the value of a testing run’s sample’s dilution is obtained. There is no limit to the number of get_value() chains that may be called.
+It is possible to “chain” get_value() method calls for downstream objects. There is no limit to the number of get_value() chains that may be called.
 
 Arrays are collections of data, therefore the get_value() method call can be used to obtain the value of the collection.
 
@@ -224,6 +234,15 @@ It is important to derive a consistent naming convention for subjects when confi
 be easier to modify via scripts as well. Consider positive naming conventions and schemas prior to configuring Limfinity.
 </aside>
 
+```ruby
+params[:display_field] = {
+  'Submission' => 'Submission Name'
+}
+```
+### Using params[:display_field] in Before Script
+User can choose any ‘Text Field’ UDF as a display option for linked subject(s) instead of the
+system generated ‘Name’ field.
+
 ## Creating Subjects
 ```ruby
 # Here we create a subject, and within a loop set a few of its UDF values
@@ -237,7 +256,12 @@ end
 # Here we call the create_subject method and create a subject of type "QC Sample"
 # Using the open_subject() method call, the created subject will be opened.
 
-subject = create_subject('QC Sample')
+subject = create_subject('QC Sample') do |qc|
+  qc.name = params['Name']
+  qc.set_value('Lot #', params['Lot #'])
+end
+
+open_subject(subject)
 ```
 To create subjects via scripts in Limfinity, the `create_subject()` method is called. The `create_subject()` method is often called using a loop, so as to create multiple subjects, or to assign values to the subject which is being created.
 
@@ -256,11 +280,20 @@ subj.get_value(samples).each do |sample|
   sample.destroy
 end
 ```
+```ruby
+def before_delete_action
+  false
+end
+```
 To delete subjects in Limfinity, the destroy() method is used. Calling the destroy() method will delete the subject from the database. The associated information and user-defined field data will be deleted as well.
 
 <aside class="notice">
 Only use the destroy() method when it is confirmed that the subject is to be completed removed from the database. The destroy() method will remove the object and associated object information from the database.
 </aside>
+
+### Prevent Deleted Subjects
+
+Add a method to Subject Type Subject Extension to prevent a user deleting any related subject/s by any means.
 
 ## Copying Properties from Another Subject
 ```ruby
@@ -278,3 +311,38 @@ To copy properties from one subject to another, the copy_properties_from() metho
 aside class="notice">
 Copying properties works simply by taking a subject (user-defined field) and duplicating that data into another subject.
 </aside>
+
+
+## Setting Permissions
+```ruby
+ug = UserGroup.find_by_name('Users')
+sub = params['Project']
+subj.set_value('Project', sub)
+# Acl::NOACCESS, Acl::READONLY, ACL::READWRITE
+Acl.set_permissions(sub, ug, Acl::READWRITE)
+```
+The `set_permission` method is used to set a permission flag on an object for a user group. The following parameter definitions for the parameters are explained below:
+
+* NOACCESS – Specifies a user group which has a designated access level of “no access”
+* READONLY – Specifies a user group which has a designated access level of “view only”
+* READWRITE – Specifies a user group which has a designated access level of “full access”
+
+The syntax for the `Acl.set_permission` method is as follows:
+
+`Acl.set_permission(subject, user_group, NOACCESS/READONLY/READWRITE)`
+
+The following After Script is used to give `READWRITE` permission to subject type- subject ‘Project’ for
+user group **‘Users’**. The subject type ‘Project’ is set as **‘READONLY’** for user group **‘Users’**
+
+## Removing Permissions
+```ruby
+ug = UserGroup.find_by_name('Users')
+sub = params['Project']
+subj.set_value('Project', sub)
+# Acl::NOACCESS, Acl::READONLY, ACL::READWRITE
+Acl.remove_permission(sub, ug)
+```
+
+The `remove_permission` method is used to remove a permission flag on an object for a user group. The syntax for the `Acl.remove_permission` method is as follows:
+
+`Acl.remove_permission(subject, user_group)`
