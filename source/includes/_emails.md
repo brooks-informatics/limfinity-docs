@@ -29,7 +29,7 @@ After the recipients have been assigned, the `send_email()` method is called. Th
 ## Sending an email with a file attachment
 ```ruby
 # recipient email address
-email_addr = 'test@ruro.com'
+email_addr = 'test@brooks.com'
 
 # This is the email template in the system
 template = "Email Test"

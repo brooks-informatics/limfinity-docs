@@ -684,7 +684,7 @@ req = Net::HTTP::Post::Multipart.new url.path,
                                      :username=>'admin', :password=>'admin',
                                      :method=>'search_subjects', :subject_type=>'Client', :search_mode=>'REGULAR',
                                      :user_fields=>'Address, Phone Number',
-                                     :fields=>'Subject Name', :conditions=>'contains', :values=>'ruro'#Copy and paste optional control par ameters here
+                                     :fields=>'Subject Name', :conditions=>'contains', :values=>'brooks'#Copy and paste optional control par ameters here
 
 res = Net::HTTP.start(url.host, url.port) do |http|
   http.request(req)
