@@ -1500,7 +1500,7 @@ Note that an email template is always required to send an email. Email templates
 After the recipients have been assigned, the <code>send_email()</code> method is called. The method takes the first parameter of the recipients, the second of the defined email template, and the last parameter of the opened subject.
 *Note that an email template is always required to send an email. Email templates must be created in the system in order to successfully send an email.</p>
 <h2 id='sending-an-email-with-a-file-attachment'>Sending an email with a file attachment</h2><pre class="highlight ruby tab-ruby"><code><span class="c1"># recipient email address</span>
-<span class="n">email_addr</span> <span class="o">=</span> <span class="s1">'test@ruro.com'</span>
+<span class="n">email_addr</span> <span class="o">=</span> <span class="s1">'test@brooks.com'</span>
 
 <span class="c1"># This is the email template in the system</span>
 <span class="n">template</span> <span class="o">=</span> <span class="s2">"Email Test"</span>
@@ -2774,7 +2774,7 @@ Following is a list of Methods along with the returned objects they call along w
                                      <span class="ss">:username</span><span class="o">=&gt;</span><span class="s1">'admin'</span><span class="p">,</span> <span class="ss">:password</span><span class="o">=&gt;</span><span class="s1">'admin'</span><span class="p">,</span>
                                      <span class="ss">:method</span><span class="o">=&gt;</span><span class="s1">'search_subjects'</span><span class="p">,</span> <span class="ss">:subject_type</span><span class="o">=&gt;</span><span class="s1">'Client'</span><span class="p">,</span> <span class="ss">:search_mode</span><span class="o">=&gt;</span><span class="s1">'REGULAR'</span><span class="p">,</span>
                                      <span class="ss">:user_fields</span><span class="o">=&gt;</span><span class="s1">'Address, Phone Number'</span><span class="p">,</span>
-                                     <span class="ss">:fields</span><span class="o">=&gt;</span><span class="s1">'Subject Name'</span><span class="p">,</span> <span class="ss">:conditions</span><span class="o">=&gt;</span><span class="s1">'contains'</span><span class="p">,</span> <span class="ss">:values</span><span class="o">=&gt;</span><span class="s1">'ruro'</span><span class="c1">#Copy and paste optional control par ameters here</span>
+                                     <span class="ss">:fields</span><span class="o">=&gt;</span><span class="s1">'Subject Name'</span><span class="p">,</span> <span class="ss">:conditions</span><span class="o">=&gt;</span><span class="s1">'contains'</span><span class="p">,</span> <span class="ss">:values</span><span class="o">=&gt;</span><span class="s1">'brooks'</span><span class="c1">#Copy and paste optional control par ameters here</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">start</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
   <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
